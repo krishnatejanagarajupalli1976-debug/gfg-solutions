@@ -34,7 +34,7 @@ Explanation: The spiral order of matrix will look like 1->2->3->6->9->8->7->4->5
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-29T16:52:18.759Z  
+**Submitted:** 2026-10-29T16:55:06.284Z  
 
 ```java
 class Solution {
