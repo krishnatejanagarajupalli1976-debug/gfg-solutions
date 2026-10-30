@@ -1,7 +1,7 @@
 class Solution {
     public ArrayList<Integer> intersect(int[] a, int[] b) {
         // code here
-        HashSet<Integer> res=new HashSet<>();
+        TreeSet<Integer> res=new TreeSet<>();
         ArrayList<Integer> res1=new ArrayList<>();
         Arrays.sort(a);
         for(int num:b)
