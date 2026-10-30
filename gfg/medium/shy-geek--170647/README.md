@@ -27,28 +27,23 @@ Explanation: The prices of chocolates are [1, 2, 3, 4] and Geek had 9 coins with
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-30T13:40:17.413Z  
+**Submitted:** 2026-10-30T13:56:29.673Z  
 
 ```java
 class Solution {
     public int maximumChocolates(int k, int[] price) {
         // code here
-        int spend=k;
-        int i=price.length-1;
         int count=0;
-        while(k>0&&i>=0)
+        for(int i=price.length-1;i>=0;i--)
         {
             if(k>=price[i])
             {
-            k=k-price[i];
-            count++;
-        }
-        else
-        {
-            i--;
-        }
+                count=count+k/price[i];
+                k=k%price[i];
+            }
         }
         return count;
+        
     }
 }
 ```
