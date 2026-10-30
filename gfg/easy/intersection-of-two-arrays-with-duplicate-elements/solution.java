@@ -3,21 +3,21 @@ class Solution {
         // code here
         TreeSet<Integer> res=new TreeSet<>();
         ArrayList<Integer> res1=new ArrayList<>();
-        Arrays.sort(a);
-        for(int num:b)
+        Arrays.sort(b);
+        for(int num:a)
         {
             int low=0;
-            int high=a.length-1;
+            int high=b.length-1;
             boolean found=false;
             while(low<=high)
             {
                 int mid=low+(high-low)/2;
-                if(a[mid]==num)
+                if(b[mid]==num)
                 {
                     found=true;
                     break;
                 }
-                else if(a[mid]<num)
+                else if(b[mid]<num)
                 {
                    low=mid+1; 
                 }
