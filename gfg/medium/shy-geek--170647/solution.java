@@ -1,21 +1,16 @@
 class Solution {
     public int maximumChocolates(int k, int[] price) {
         // code here
-        int spend=k;
-        int i=price.length-1;
         int count=0;
-        while(k>0&&i>=0)
+        for(int i=price.length-1;i>=0;i--)
         {
             if(k>=price[i])
             {
-            k=k-price[i];
-            count++;
-        }
-        else
-        {
-            i--;
-        }
+                count=count+k/price[i];
+                k=k%price[i];
+            }
         }
         return count;
+        
     }
 }
