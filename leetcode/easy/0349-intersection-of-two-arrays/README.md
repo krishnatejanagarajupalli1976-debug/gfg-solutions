@@ -35,9 +35,9 @@ Explanation: [4,9] is also accepted.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 50.88%)  
-**Memory:** 44.5 MB (beats 89.71%)  
-**Submitted:** 2026-10-30T06:14:07.301Z  
+**Runtime:** 2 ms (beats 97.89%)  
+**Memory:** 44.4 MB (beats 93.54%)  
+**Submitted:** 2026-10-30T06:16:30.413Z  
 
 ```java
 class Solution {
@@ -51,12 +51,13 @@ class Solution {
         }
         for(int num:nums2)
         {
+            if(set1.contains(num))
             set2.add(num);
         }
-        set1.retainAll(set2);
-        int[] mat=new int[set1.size()];
+        
+        int[] mat=new int[set2.size()];
         int i=0;
-        for(int j:set1)
+        for(int j:set2)
         {
             mat[i++]=j;
         }
