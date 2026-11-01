@@ -3,40 +3,39 @@ class Solution {
         // code here
         TreeSet<Integer> res=new TreeSet<>();
         ArrayList<Integer> res1=new ArrayList<>();
-        Arrays.sort(b);
-        for(int num:a)
+        Arrays.sort(a);
+        for(int num:b){
+        int low=0;
+        int high=a.length-1;
+        boolean found=false;
+        while(low<=high)
         {
-            int low=0;
-            int high=b.length-1;
-            boolean found=false;
-            while(low<=high)
+            int mid=low+(high-low)/2;
+            if(a[mid]==num)
             {
-                int mid=low+(high-low)/2;
-                if(b[mid]==num)
-                {
-                    found=true;
-                    break;
-                }
-                else if(b[mid]<num)
-                {
-                   low=mid+1; 
-                }
-                else{
-                    high=mid-1;
-                }
+                found=true;
+                break;
             }
-            if(found)
+            else if(a[mid]<num)
             {
-                res.add(num);
-                
+                low=mid+1;
+            }
+            else
+            {
+                high=mid-1;
             }
         }
-            for(int num1:res)
-            {
-                res1.add(num1);
-            }
-        
-        return res1;
+        if(found)
+        {
+            res.add(num);
+        }
         
     }
+    for(int nums:res)
+    {
+        res1.add(nums);
+    }
+    return res1;
 }
+}
+
