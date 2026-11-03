@@ -25,21 +25,18 @@ Explanation: We only have two elements so max of 5 and 5 is 5 only.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-03T15:40:31.415Z  
+**Submitted:** 2026-11-03T15:55:29.348Z  
 
 ```java
 class Solution {
     public ArrayList<Integer> maxAdj(int[] arr) {
         // code here
         ArrayList<Integer> res=new ArrayList<>();
-        for(int i=0;i<arr.length;i++)
+        for(int i=0;i<arr.length-1;i++)
         {
-            for(int j=i+1;j<arr.length;j++)
-            {
-                res.add(Math.max(arr[i],arr[j]));
-                break;
+                res.add(Math.max(arr[i],arr[i+1]));
+            
             }
-        }
         return res;
     }
 };
