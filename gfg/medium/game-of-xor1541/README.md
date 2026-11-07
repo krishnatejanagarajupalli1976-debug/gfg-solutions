@@ -34,32 +34,22 @@ Result: 1 ^ 3 ^ 2 = 0
 
 ## Solution
 
-**Language:** Java  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-07T16:45:01.053Z  
+**Submitted:** 2026-11-07T16:58:50.685Z  
 
-```java
-class Solution {
-    public int subarrayXor(int[] arr) {
-
-        int n = arr.length;
-
-        if(n % 2 == 0)
-        {
-            return 0;
-        }
-
-        int ans = 0;
-
-        for(int i = 0; i < n; i += 2)
-        {
-            ans ^= arr[i];
-        }
-
-        return ans;
-    }
-}
+```py
+class Solution:
+    def subarrayXor(self, arr):
+        # code here 
+        n=len(arr)
+        if n%2==0:
+            return 0
+        ans=0
+        for i in range(0,n,2):
+            ans=ans^arr[i]
+        return ans
 ```
 
 ---
