@@ -31,20 +31,58 @@ Explanation: There is no pair with sum = target
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-10T13:00:50.348Z  
+**Submitted:** 2026-11-10T13:04:59.929Z  
 
 ```java
+import java.util.Arrays;
+
 class Solution {
     int countPairs(int arr[], int target) {
-        // code here
-        HashMap<Integer,Integer> map=new HashMap<>();
-        int count=0;
-        for(int i=0;i<arr.length;i++)
-        {
-            int required=target-arr[i];
-            count+=map.getOrDefault(required,0);
-            map.put(arr[i],map.getOrDefault(arr[i],0)+1);
+
+        Arrays.sort(arr);
+
+        int count = 0;
+        int left = 0;
+        int right = arr.length - 1;
+
+        while(left < right) {
+
+            int sum = arr[left] + arr[right];
+
+            if(sum == target) {
+
+                if(arr[left] == arr[right]) {
+                    int n = right - left + 1;
+                    count += (n * (n - 1)) / 2;
+                    break;
+                }
+
+                int a = arr[left];
+                int b = arr[right];
+
+                int c1 = 0;
+                int c2 = 0;
+
+                while(left <= right && arr[left] == a) {
+                    c1++;
+                    left++;
+                }
+
+                while(right >= left && arr[right] == b) {
+                    c2++;
+                    right--;
+                }
+
+                count += c1 * c2;
+            }
+            else if(sum < target) {
+                left++;
+            }
+            else {
+                right--;
+            }
         }
+
         return count;
     }
 }
