@@ -31,7 +31,7 @@ Explanation: There is no pair with sum = target
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-10T10:57:09.183Z  
+**Submitted:** 2026-11-10T13:00:50.348Z  
 
 ```java
 class Solution {
