@@ -1,25 +1,19 @@
+import java.util.*;
+
 class Solution {
-    public int findKthLargest(int[] a, int k) {
-        int max = Integer.MIN_VALUE;
-        int index = -1;
+    public int findKthLargest(int[] nums, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
-        for(int i = 1; i <= k; i++)
+        for(int i = 0; i < nums.length; i++)
         {
-            max = Integer.MIN_VALUE;
-            index = -1;
+            pq.add(nums[i]);
 
-            for(int j = 0; j < a.length; j++)
+            if(pq.size() > k)
             {
-                if(max < a[j])
-                {
-                    max = a[j];
-                    index = j;
-                }
+                pq.poll();
             }
-
-            a[index] = Integer.MIN_VALUE;
         }
 
-        return max;
+        return pq.peek();
     }
 }
