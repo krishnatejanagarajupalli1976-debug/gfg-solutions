@@ -32,39 +32,27 @@ Explanation: After deleting head from the given linked list, we'll be left with 
 
 ## Solution
 
-**Language:** Java  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-14T12:10:15.552Z  
+**Submitted:** 2026-11-14T12:12:12.692Z  
 
-```java
-/* Structure of Linked List Node
-class Node
-{
-    int data;
-    Node next;
+```py
+'''Structure of Linked List Node
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+'''
 
-    Node(int data)
-    {
-        this.data = data;
-        this.next = next;
-    }
-} */
-
-class Solution {
-    public Node deleteHead(Node head) {
-        // code here
-        //head=head.next;
-        if(head==null)
-        {
-            return null;
-        }
-            head=head.next;
-           return head;
-        
-       
-    }
-}
+class Solution:
+    def deleteHead(self, head):
+        # code here
+        if head==None:
+            return None
+        head=head.next
+        return head
+    
 ```
 
 ---
