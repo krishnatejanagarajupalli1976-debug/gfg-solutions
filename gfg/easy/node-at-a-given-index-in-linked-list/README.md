@@ -31,42 +31,33 @@ Explanation: The linked list contains fewer than 6 nodes, so no node exists at i
 
 ## Solution
 
-**Language:** Java  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-17T16:15:01.592Z  
+**Submitted:** 2026-11-17T16:17:17.182Z  
 
-```java
-/*
-class Node {
-    int data;
-    Node next;
+```py
+'''
+class Node:
+    def __init__(self, x):
+        self.data = x
+        self.next = None
+'''
 
-    Node(int x) {
-        data = x;
-        next = null;
-    }
-}
-*/
 
-class Solution {
-    public int getNode(Node head, int k) {
-        // code here
-        Node temp=head;
-        int count=0;
-        while(temp!=null)
-        {
-            count++;
-          
-            if(count==k)
-            {
-                return temp.data;
-            }
-              temp=temp.next;
-        }
-        return -1;
-    }
-}
+class Solution:
+
+    def getNode(self, head: 'Node', k: int) -> int:
+        """ code here """
+        temp=head
+        count=0
+        while temp!=None:
+            count+=1
+            if(count==k):
+                return temp.data
+            temp=temp.next;
+        return -1
+
 ```
 
 ---
