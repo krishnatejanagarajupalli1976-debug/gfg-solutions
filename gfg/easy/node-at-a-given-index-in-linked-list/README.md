@@ -34,7 +34,7 @@ Explanation: The linked list contains fewer than 6 nodes, so no node exists at i
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-17T16:13:53.788Z  
+**Submitted:** 2026-11-17T16:15:01.592Z  
 
 ```java
 /*
