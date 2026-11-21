@@ -30,7 +30,7 @@ Explanation: As shown in figure this is not a circular linked list.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-15T02:29:03.163Z  
+**Submitted:** 2026-11-21T16:46:26.915Z  
 
 ```java
 /* Linked List Node Structure
