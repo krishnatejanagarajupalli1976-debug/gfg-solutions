@@ -27,40 +27,30 @@ Explanation: In the given linked list  2 -> 2 -> 2 -> 2, 2 is the only element a
 
 ## Solution
 
-**Language:** Java  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-24T16:08:29.283Z  
+**Submitted:** 2026-11-24T16:26:51.718Z  
 
-```java
-/* Structure of linked list Node
-class Node {
-    int data;
-    Node next;
+```py
+"""
+# Structure of linked list Node
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+"""
 
-    Node(int d) {
-      data = d;
-      next = null;
-    }
-}
-*/
-class Solution {
-    Node removeDuplicates(Node head) {
-        // code here
-        Node temp=head;
-        while(temp!=null && temp.next!=null)
-        {
-            if(temp.data==temp.next.data)
-            {
-                temp.next=temp.next.next;
-            }
-            else
-            temp=temp.next;
-        }
-        return head;
-        
-    }
-}
+class Solution:
+    def removeDuplicates(self, head):
+        # code here
+        temp=head;
+        while(temp!=None and temp.next!=None):
+            if temp.data == temp.next.data:
+                temp.next=temp.next.next
+            else:
+                temp=temp.next
+        return head
 ```
 
 ---
