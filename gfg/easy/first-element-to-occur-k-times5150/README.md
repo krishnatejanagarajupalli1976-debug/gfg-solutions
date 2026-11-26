@@ -32,29 +32,21 @@ Explanation: No element occurs at least 10 times in the array.
 
 ## Solution
 
-**Language:** Java  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-26T03:07:37.899Z  
+**Submitted:** 2026-11-26T03:10:26.251Z  
 
-```java
-class Solution {
-    public int firstElementKTime(int[] arr, int k) {
-        // code here
-        int[] freq=new int[1000001];
-        for(int i=0;i<arr.length;i++)
-        {
-            freq[arr[i]]++;
-            if(freq[arr[i]]==k)
-            {
-                return arr[i];
-            }
-            
-        }
-        return -1;
-        
-    }
-}
+```py
+class Solution:
+    def firstElementKTime(self, arr: list[int], k: int) -> int:
+        # code here
+        freq=[0]*1000001
+        for i in range(len(arr)):
+            freq[arr[i]]+=1
+            if(freq[arr[i]]==k):
+                return arr[i]
+        return -1
 ```
 
 ---
